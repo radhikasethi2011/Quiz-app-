@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'main_screen.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,10 +10,10 @@ class HomeScreen extends StatelessWidget {
           'QUIZ APP',
           style: TextStyle(
             color: Colors.black,
-
+            fontFamily: "Merriweather",
           ),
         ), 
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.greenAccent,
         
         ),
          body: Stack(
@@ -50,7 +50,14 @@ class HomeScreen extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50.0)
                           ),
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MainScreen()
+                              )
+                            );
+                          },
 
                         ),
                       ),
